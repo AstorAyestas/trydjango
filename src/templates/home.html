@@ -1,7 +1,23 @@
 {%extends 'base.html'%} 
 {%block body%}
-    <h1>Hello world madefuker</h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laboriosam explicabo, deleniti qui sequi culpa, soluta magni obcaecati perferendis ad nihil maiores dignissimos minus quia rem ex eligendi. Natus, quod.
-    </p>
+<h1>Hello world madefuker</h1>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laboriosam explicabo, deleniti qui sequi culpa, soluta magni obcaecati perferendis ad nihil maiores dignissimos minus quia rem ex eligendi. Natus, quod.
+</p>
+
+<h2>{{ myname}}</h2>
+<h3>{{ myage}}</h3>
+<ul>
+{% for skill in myskills %}
+    {% if skill == 2 %}
+        <p> add some text</p1>
+        <li>{{ forloop.counter }}-{{ skill|add:1 }}</li>
+    {% elif skill == 'html'%}
+        <li>{{ forloop.counter }}-{{ skill}} ' is html a programing language ' </li>        
+    {% else %}
+        <li>{{ forloop.counter }}-{{ skill}}</li>
+    {% endif%}    
+{% endfor %}
+</ul>
+
 {%endblock%}

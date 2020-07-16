@@ -1,2 +1,2 @@
 env
-src/db.sqllite3
+src/db.sqlite3
